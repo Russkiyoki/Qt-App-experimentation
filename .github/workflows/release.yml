@@ -1,0 +1,45 @@
+name: Qt App
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.6.0'  # your Qt version
+      - name: Build on Linux
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+      - name: Upload Linux Binary
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/QtApp
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.6.0'
+      - name: Build on Windows
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+      - name: Upload Windows EXE
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/QtApp.exe
