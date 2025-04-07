@@ -1,0 +1,5 @@
+/home/russ/Documents/VscodeProjects/Cprojects/qtApp/build/CMakeFiles/QtApp.dir
+/home/russ/Documents/VscodeProjects/Cprojects/qtApp/build/CMakeFiles/edit_cache.dir
+/home/russ/Documents/VscodeProjects/Cprojects/qtApp/build/CMakeFiles/rebuild_cache.dir
+/home/russ/Documents/VscodeProjects/Cprojects/qtApp/build/CMakeFiles/QtApp_autogen_timestamp_deps.dir
+/home/russ/Documents/VscodeProjects/Cprojects/qtApp/build/CMakeFiles/QtApp_autogen.dir
